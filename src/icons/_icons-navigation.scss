@@ -8,7 +8,7 @@
 .icon-forward,
 .icon-upward {
   &::before {
-    border: $icon-border-width solid currentColor;
+    border: var(--icon-border-width) solid currentColor;
     border-bottom: 0;
     border-right: 0;
     height: .65em;
@@ -44,7 +44,7 @@
 .icon-forward {
   &::after {
     background: currentColor;
-    height: $icon-border-width;
+    height: var(--icon-border-width);
     width: .8em;
   }
 }
@@ -54,7 +54,7 @@
   &::after {
     background: currentColor;
     height: .8em;
-    width: $icon-border-width;
+    width: var(--icon-border-width);
   }
 }
 
@@ -111,7 +111,7 @@
   &::before {
     background: currentColor;
     box-shadow: 0 -.35em, 0 .35em;
-    height: $icon-border-width;
+    height: var(--icon-border-width);
     width: 100%;
   }
 }

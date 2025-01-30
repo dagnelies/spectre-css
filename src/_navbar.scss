@@ -22,7 +22,7 @@
   }
 
   .navbar-brand {
-    font-size: $font-size-lg;
+    font-size: var(--font-size-lg);
     text-decoration: none;
   }
 }

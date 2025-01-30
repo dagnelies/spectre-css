@@ -17,6 +17,6 @@
   }
 
   .hero-body {
-    padding: $layout-spacing;
+    padding: var(--layout-spacing);
   }
 }

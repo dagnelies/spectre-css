@@ -4,30 +4,30 @@
 .container {
   margin-left: auto;
   margin-right: auto;
-  padding-left: $layout-spacing;
-  padding-right: $layout-spacing;
+  padding-left: var(--layout-spacing);
+  padding-right: var(--layout-spacing);
   width: 100%;
 
-  $grid-spacing: math.div($layout-spacing, $layout-spacing * 0 + 1) * $html-font-size;
+  var(--grid-spacing): math.div(var(--layout-spacing), var(--layout-spacing) * 0 + 1) * var(--html-font-size);
 
   &.grid-xl {
-    max-width: $grid-spacing * 2 + $size-xl;
+    max-width: var(--grid-spacing) * 2 + var(--size-xl);
   }
 
   &.grid-lg {
-    max-width: $grid-spacing * 2 + $size-lg;
+    max-width: var(--grid-spacing) * 2 + var(--size-lg);
   }
 
   &.grid-md {
-    max-width: $grid-spacing * 2 + $size-md;
+    max-width: var(--grid-spacing) * 2 + var(--size-md);
   }
 
   &.grid-sm {
-    max-width: $grid-spacing * 2 + $size-sm;
+    max-width: var(--grid-spacing) * 2 + var(--size-sm);
   }
 
   &.grid-xs {
-    max-width: $grid-spacing * 2 + $size-xs;
+    max-width: var(--grid-spacing) * 2 + var(--size-xs);
   }
 }
 
@@ -45,8 +45,8 @@
 .columns {
   display: flex;
   flex-wrap: wrap;
-  margin-left: -$layout-spacing;
-  margin-right: -$layout-spacing;
+  margin-left: -var(--layout-spacing);
+  margin-right: -var(--layout-spacing);
 
   &.col-gapless {
     margin-left: 0;
@@ -66,8 +66,8 @@
 .column {
   flex: 1;
   max-width: 100%;
-  padding-left: $layout-spacing;
-  padding-right: $layout-spacing;
+  padding-left: var(--layout-spacing);
+  padding-right: var(--layout-spacing);
 
   &.col-12,
   &.col-11,
@@ -136,7 +136,7 @@
 .col-mr-auto {
   margin-right: auto;
 }
-@media (max-width: $size-xl) {
+@media (max-width: var(--size-xl)) {
   .col-xl-12,
   .col-xl-11,
   .col-xl-10,
@@ -198,7 +198,7 @@
     display: block !important;
   }
 }
-@media (max-width: $size-lg) {
+@media (max-width: var(--size-lg)) {
   .col-lg-12,
   .col-lg-11,
   .col-lg-10,
@@ -260,7 +260,7 @@
     display: block !important;
   }
 }
-@media (max-width: $size-md) {
+@media (max-width: var(--size-md)) {
   .col-md-12,
   .col-md-11,
   .col-md-10,
@@ -322,7 +322,7 @@
     display: block !important;
   }
 }
-@media (max-width: $size-sm) {
+@media (max-width: var(--size-sm)) {
   .col-sm-12,
   .col-sm-11,
   .col-sm-10,
@@ -384,7 +384,7 @@
     display: block !important;
   }
 }
-@media (max-width: $size-xs) {
+@media (max-width: var(--size-xs)) {
   .col-xs-12,
   .col-xs-11,
   .col-xs-10,

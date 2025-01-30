@@ -6,13 +6,13 @@
   .popover-container {
     left: 50%;
     opacity: 0;
-    padding: $layout-spacing;
+    padding: var(--layout-spacing);
     position: absolute;
     top: 0;
     transform: translate(-50%, -50%) scale(0);
     transition: transform .2s;
-    width: $control-width-sm;
-    z-index: $zindex-3;
+    width: var(--control-width-sm);
+    z-index: var(--zindex-3);
   }
 
   *:focus + .popover-container,

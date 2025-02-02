@@ -1,7 +1,7 @@
 // Codes
 code {
   @include label-base();
-  @include label-variant(var(--code-color), lighten(var(--code-color), 42.5%));
+  @include label-variant(var(--code-color), color-mix(in srgb, var(--code-color), white 42.5%));
   font-size: 85%;
 }
 

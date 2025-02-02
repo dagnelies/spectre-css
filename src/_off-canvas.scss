@@ -1,5 +1,7 @@
 // Off canvas menus
-var(--off-canvas-breakpoint): var(--size-lg) !default;
+.off-canvas {
+  --off-canvas-breakpoint: var(--size-lg);
+}
 
 .off-canvas {
   display: flex;

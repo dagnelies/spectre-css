@@ -1,7 +1,7 @@
 // Labels
 .label {
   @include label-base(.4em);
-  @include label-variant(lighten(var(--body-font-color), 5%), var(--bg-color-dark));
+  @include label-variant(color-mix(in srgb, var(--body-font-color), white 5%), var(--bg-color-dark));
   display: inline-block;
 
   // Label rounded

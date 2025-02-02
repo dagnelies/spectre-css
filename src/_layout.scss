@@ -8,6 +8,9 @@
   padding-right: var(--layout-spacing);
   width: 100%;
 
+  /*
+  TODO: unclear & unnecessary? See docs: https://spectre-org.github.io/spectre-docs/docs/layout/responsive.html#container
+  
   var(--grid-spacing): math.div(var(--layout-spacing), var(--layout-spacing) * 0 + 1) * var(--html-font-size);
 
   &.grid-xl {
@@ -29,6 +32,7 @@
   &.grid-xs {
     max-width: var(--grid-spacing) * 2 + var(--size-xs);
   }
+  */
 }
 
 // Responsive breakpoint system

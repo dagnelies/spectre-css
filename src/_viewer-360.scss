@@ -3,10 +3,10 @@
 // Mixin: Viewer slider sizes
 @use "sass:math";
 
-@mixin viewer-slider-size(var(--image-number): 36) {
-  @for var(--s) from 1 through (var(--image-number)) {
-    .viewer-slider[max='#{var(--image-number)}'][value='#{var(--s)}'] + .viewer-image {
-      background-position-y: percentage(math.div(((var(--s))-1) * 1, (var(--image-number))-1));
+@mixin viewer-slider-size($image-number: 36) {
+  @for $s from 1 through ($image-number) {
+    .viewer-slider[max='#{$image-number}'][value='#{$s}'] + .viewer-image {
+      background-position-y: percentage(math.div((($s)-1) * 1, ($image-number)-1));
     }
   }
 }

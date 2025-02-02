@@ -5,11 +5,11 @@
 
     /* Core colors */
     --primary-color: #5755d9;
-    --primary-color-dark: color-mix(in srgb, var(--primary-color), black 5%); // darken(var(--primary-color), 3%);
-    --primary-color-light: color-mix(in srgb, var(--primary-color), white 5%); // lighten(var(--primary-color), 3%);
+    --primary-color-dark: color-mix(in srgb, var(--primary-color), black 3%); // darken(var(--primary-color), 3%);
+    --primary-color-light: color-mix(in srgb, var(--primary-color), white 3%); // lighten(var(--primary-color), 3%);
     --secondary-color: color-mix(in srgb, var(--primary-color), white 37%); // lighten(var(--primary-color), 37.5%);
-    --secondary-color-dark: color-mix(in srgb, var(--secondary-color), black 5%); // darken(var(--secondary-color), 3%);
-    --secondary-color-light: color-mix(in srgb, var(--secondary-color), white 5%); // lighten(var(--secondary-color), 3%);
+    --secondary-color-dark: color-mix(in srgb, var(--secondary-color), black 3%); // darken(var(--secondary-color), 3%);
+    --secondary-color-light: color-mix(in srgb, var(--secondary-color), white 3%); // lighten(var(--secondary-color), 3%);
 
     /* Gray colors */
     --dark-color: #303742;
@@ -83,18 +83,22 @@
     --layout-spacing: var(--unit-2);
     --layout-spacing-sm: var(--unit-1);
     --layout-spacing-lg: var(--unit-4);
+
     --border-radius: var(--unit-h);
     --border-width: var(--unit-o);
     --border-width-lg: var(--unit-h);
+    
     --control-size: var(--unit-9);
     --control-size-sm: var(--unit-7);
     --control-size-lg: var(--unit-10);
+    
     --control-padding-x: var(--unit-2);
-    --control-padding-x-sm: var(--unit-2) * 0.75;
-    --control-padding-x-lg: var(--unit-2) * 1.5;
-    --control-padding-y: (var(--control-size) - var(--line-height)) * 0.5 - var(--border-width);
-    --control-padding-y-sm: (var(--control-size-sm) - var(--line-height)) * 0.5 - var(--border-width);
-    --control-padding-y-lg: (var(--control-size-lg) - var(--line-height)) * 0.5 - var(--border-width);
+    --control-padding-x-sm: var(--unit-1);
+    --control-padding-x-lg: var(--unit-3);
+    --control-padding-y: var(--unit-2);
+    --control-padding-y-sm: var(--unit-1);
+    --control-padding-y-lg: var(--unit-3);
+    
     --control-icon-size: 0.8rem;
 
     --control-width-xs: 180px;

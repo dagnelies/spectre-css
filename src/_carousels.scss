@@ -1,6 +1,6 @@
 // Carousels
 // The number of carousel images
-var(--carousel-number): 8;
+$carousel-number: 8;
 
 %carousel-image-checked { 
   animation: carousel-slidein .75s ease-in-out 1;
@@ -70,13 +70,13 @@ var(--carousel-number): 8;
   }
 
   .carousel-locator {
-    @for var(--i) from 1 through (var(--carousel-number)) {
+    @for $i from 1 through ($carousel-number) {
       &:nth-of-type(#{var(--i)}):checked ~ .carousel-container .carousel-item:nth-of-type(#{var(--i)}) {
         @extend %carousel-image-checked;
       }
     }
 
-    @for var(--i) from 1 through (var(--carousel-number)) {
+    @for $i from 1 through ($carousel-number) {
       &:nth-of-type(#{var(--i)}):checked ~ .carousel-nav .nav-item:nth-of-type(#{var(--i)}) {
         @extend %carousel-nav-checked;
       }

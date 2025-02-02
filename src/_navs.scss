@@ -17,7 +17,7 @@
     }
     &.active {
       & > a {
-        color: darken(var(--gray-color-dark), 10%);
+        color: color-mix(in srgb, var(--gray-color-dark), black 10%);
         font-weight: bold;
         &:focus,
         &:hover {

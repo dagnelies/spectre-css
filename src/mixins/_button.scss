@@ -1,33 +1,33 @@
 // Button variant mixin
 @mixin button-variant($color: $primary-color) {
   background: $color;
-  border-color: darken($color, 3%);
-  color: $light-color;
+  border-color: color-mix(in srgb, $color, 3%); // darken($color, 3%);
+  color: var(--light-color);
   &:focus {
     @include control-shadow($color);
   }
   &:focus,
   &:hover {
-    background: darken($color, 2%);
-    border-color: darken($color, 5%);
-    color: $light-color;
+    background: color-mix(in srgb, $color, black 2%); // darken($color, 2%);
+    border-color: color-mix(in srgb, $color, black 5%); // darken($color, 5%);
+    color: var(--light-color);
   }
   &:active,
   &.active {
-    background: darken($color, 7%);
-    border-color: darken($color, 10%);
-    color: $light-color;
+    background: color-mix(in srgb, $color, black 7%); // darken($color, 7%);
+    border-color: color-mix(in srgb, $color, black 10%); // darken($color, 10%);
+    color: var(--light-color);
   }
   &.loading {
     &::after {
-      border-bottom-color: $light-color;
-      border-left-color: $light-color;
+      border-bottom-color: var(--light-color);
+      border-left-color: var(--light-color);
     }
   }
 }
 
 @mixin button-outline-variant($color: $primary-color) {
-  background: $light-color;
+  background: var(--light-color);
   border-color: $color;
   color: $color;
   &:focus {
@@ -43,7 +43,7 @@
   &.active {
     background: $color;
     border-color: darken($color, 5%);
-    color: $light-color;
+    color: var(--light-color);
   }
   &.loading {
     &::after {

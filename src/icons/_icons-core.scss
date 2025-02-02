@@ -1,9 +1,9 @@
 // Icon variables
-var(--icon-border-width): var(--border-width-lg);
-var(--icon-prefix): "icon";
+$icon-border-width: var(--border-width-lg);
+$icon-prefix: "icon";
 
 // Icon base style
-.#{var(--icon-prefix)} {
+.#{$icon-prefix} {
   box-sizing: border-box;
   display: inline-block;
   font-size: inherit;
@@ -42,13 +42,13 @@ var(--icon-prefix): "icon";
 .btn,
 .toast,
 .menu {
-  .#{var(--icon-prefix)} {
+  .#{$icon-prefix} {
     vertical-align: -10%;
   }
 }
 
 .btn-lg {
-  .#{var(--icon-prefix)} {
+  .#{$icon-prefix} {
     vertical-align: -15%;
   }
 }

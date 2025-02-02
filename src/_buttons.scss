@@ -55,14 +55,14 @@
     color: var(--light-color);
     &:focus,
     &:hover {
-      background: darken(var(--primary-color-dark), 2%);
-      border-color: darken(var(--primary-color-dark), 5%);
+      background: color-mix(in srgb, var(--primary-color-dark), black 2%); // darken(var(--primary-color-dark), 2%);
+      border-color: color-mix(in srgb, var(--primary-color-dark), black 5%); // darken(var(--primary-color-dark), 5%);
       color: var(--light-color);
     }
     &:active,
     &.active {
-      background: darken(var(--primary-color-dark), 4%);
-      border-color: darken(var(--primary-color-dark), 7%);
+      background: color-mix(in srgb, var(--primary-color-dark), black 4%); // darken(var(--primary-color-dark), 4%);
+      border-color: color-mix(in srgb, var(--primary-color-dark), black 4%); // darken(var(--primary-color-dark), 7%);
       color: var(--light-color);
     }
     &.loading {

@@ -191,7 +191,7 @@ textarea.form-input {
   }
 
   .form-input {
-    padding-left: var(--control-icon-size) + var(--control-padding-y) * 2;
+    padding-left: calc(var(--control-icon-size) + var(--control-padding-y) * 2);
   }
 }
 
@@ -201,7 +201,7 @@ textarea.form-input {
   }
 
   .form-input {
-    padding-right: var(--control-icon-size) + var(--control-padding-y) * 2;
+    padding-right: calc(var(--control-icon-size) + var(--control-padding-y) * 2);
   }
 }
 
@@ -211,9 +211,9 @@ textarea.form-input {
 .form-switch {
   display: block;
   line-height: var(--line-height);
-  margin: (var(--control-size) - var(--control-size-sm)) * .5 0;
+  margin: var(--layout-spacing); // TODO: check if that's fine
   min-height: var(--control-size-sm);
-  padding: ((var(--control-size-sm) - var(--line-height)) * .5) var(--control-padding-x) ((var(--control-size-sm) - var(--line-height)) * .5) (var(--control-icon-size) + var(--control-padding-x));
+  padding: var(--control-padding-y) var(--control-padding-x); // TODO: check if that's fine
   position: relative;
 
   input {
@@ -249,7 +249,7 @@ textarea.form-input {
 
   &.input-lg {
     font-size: var(--font-size-lg);
-    margin: (var(--control-size-lg) - var(--control-size-sm)) * .5 0;
+    margin: var(--layout-spacing); // TODO: check if that's fine
   }
 }
 
@@ -259,7 +259,7 @@ textarea.form-input {
     background: var(--bg-color-light);
     height: var(--control-icon-size);
     left: 0;
-    top: (var(--control-size-sm) - var(--control-icon-size)) * .5;
+    top: 0; // TODO: (var(--control-size-sm) - var(--control-icon-size)) * .5;
     width: var(--control-icon-size);
   }
 
@@ -339,9 +339,9 @@ textarea.form-input {
     background: var(--gray-color);
     background-clip: padding-box;
     border-radius: var(--unit-2) + var(--border-width);
-    height: var(--unit-4) + var(--border-width) * 2;
+    height: var(--control-icon-size); // TODO: var(--unit-4) + var(--border-width) * 2;
     left: 0;
-    top: (var(--control-size-sm) - var(--unit-4)) * .5 - var(--border-width);
+    top: 0; // TODO:(var(--control-size-sm) - var(--unit-4)) * .5 - var(--border-width);
     width: var(--unit-8);
     &::before {
       background: var(--bg-color-light);
@@ -440,7 +440,7 @@ textarea.form-input {
 .form-select {
   .has-success &,
   &.is-success {
-    background: lighten(var(--success-color), 53%);
+    background: color-mix(in srgb, var(--success-color), white 50%);
     border-color: var(--success-color);
     &:focus {
       @include control-shadow(var(--success-color));
@@ -449,7 +449,7 @@ textarea.form-input {
 
   .has-error &,
   &.is-error {
-    background: lighten(var(--error-color), 53%);
+    background: color-mix(in srgb, var(--error-color), white 50%);
     border-color: var(--error-color);
     &:focus {
       @include control-shadow(var(--error-color));
@@ -499,7 +499,7 @@ textarea.form-input {
       border-color: var(--error-color);
       &:focus {
         @include control-shadow(var(--error-color));
-        background: lighten(var(--error-color), 53%);
+        background: color-mix(in srgb, var(--error-color), white 50%);
       }
 
       & + .form-input-hint {

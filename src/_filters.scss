@@ -1,6 +1,6 @@
 // Filters 
 // The number of filter options 
-var(--filter-number): 8 !default;
+$filter-number: 8 !default;
 
 %filter-checked-nav { 
   background: var(--primary-color);
@@ -22,14 +22,14 @@ var(--filter-number): 8 !default;
   }
 
   .filter-tag {
-    @for var(--i) from 0 through (var(--filter-number)) {
-      &#tag-#{var(--i)}:checked ~ .filter-nav .chip[for="tag-#{var(--i)}"] {
+    @for $i from 0 through ($filter-number) {
+      &#tag-#{$i}:checked ~ .filter-nav .chip[for="tag-#{$i}"] {
         @extend %filter-checked-nav;
       }
     }
 
-    @for var(--i) from 1 through (var(--filter-number)) {
-      &#tag-#{var(--i)}:checked ~ .filter-body .filter-item:not([data-tag~="tag-#{var(--i)}"]) {
+    @for $i from 0 through ($filter-number) {
+      &#tag-#{$i}:checked ~ .filter-body .filter-item:not([data-tag~="tag-#{$i}"]) {
         @extend %filter-checked-body;
       }
     }
